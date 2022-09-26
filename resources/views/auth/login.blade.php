@@ -72,56 +72,47 @@
 </div>
 @endsection
 @section('content')
-<div class="authentication-page-content p-4 d-flex align-items-center min-vh-100">
-    <div class="w-100">
+<main>
+    <div class="container-xl px-4">
         <div class="row justify-content-center">
-            <div class="col-lg-9">
-                <div>
-                    <div class="text-center">
-                        <div>
-                            <a href="index.html" class="logo">
-                                {{-- <img src="assets/images/logo-dark.png" height="20" alt="logo"> --}}
-                                <h4>MembeToko</h4>
-                            </a>
-                        </div>
-
-                        {{-- <h4 class="font-size-18 mt-4">Welcome Back !</h4> --}}
-                        <p class="text-muted">Admin Login</p>
-                    </div>
-
-                    <div class="p-2 mt-5">
-                        <form class="" method="POST" action="{{ route('login') }}">
+            <div class="col-lg-5">
+                <!-- Basic login form-->
+                <div class="card shadow-lg border-0 rounded-lg mt-5">
+                    <div class="card-header justify-content-center"><h3 class="fw-light my-4">Login Admin</h3></div>
+                    <div class="card-body">
+                        <!-- Login form-->
+                        <form action="{{ route('login') }}" method="POST">
                             @csrf
-                            <div class="mb-3 auth-form-group-custom mb-4">
-                                <i class="ri-user-2-line auti-custom-input-icon"></i>
-                                <label for="username">Username</label>
-                                <input type="text" class="form-control" id="username" value="{{ old('email') }}" name="email" placeholder="Enter username">
+                            <!-- Form Group (email address)-->
+                            <div class="mb-3">
+                                <label class="small mb-1" for="inputEmailAddress">Email</label>
+                                <input class="form-control" id="inputEmailAddress" name="email" type="email" placeholder="Enter email address" />
                             </div>
-    
-                            <div class="mb-3 auth-form-group-custom mb-4">
-                                <i class="ri-lock-2-line auti-custom-input-icon"></i>
-                                <label for="userpassword">Password</label>
-                                <input type="password" class="form-control" name="password" id="userpassword" placeholder="Enter password">
+                            <!-- Form Group (password)-->
+                            <div class="mb-3">
+                                <label class="small mb-1" for="inputPassword">Password</label>
+                                <input class="form-control" id="inputPassword" name="password" type="password" placeholder="Enter password" />
                             </div>
-    
-                            <div class="form-check">
-                                <input name="remember" value="{{ old('password') }}" type="checkbox" class="form-check-input" id="customControlInline">
-                                <label class="form-check-label" for="customControlInline">Remember me</label>
+                            <!-- Form Group (remember password checkbox)-->
+                            <div class="mb-3">
+                                <div class="form-check">
+                                    <input class="form-check-input" name="remember" id="rememberPasswordCheck" type="checkbox" value="" />
+                                    <label class="form-check-label" for="rememberPasswordCheck">Remember password</label>
+                                </div>
                             </div>
-
-                            <div class="mt-4 text-center">
-                                <button class="btn btn-primary w-md waves-effect waves-light" type="submit">Log In</button>
-                            </div>
-
-                            <div class="mt-4 text-center">
-                                <a href="auth-recoverpw.html" class="text-muted"><i class="mdi mdi-lock me-1"></i> Lupa Password?</a>
+                            <!-- Form Group (login box)-->
+                            <div class="d-flex align-items-center justify-content-between mt-4 mb-0">
+                                <a class="small" href="auth-password-basic.html">Forgot Password?</a>
+                                <button type="submit" class="btn btn-primary">Login</button>
                             </div>
                         </form>
                     </div>
-
+                    <div class="card-footer text-center">
+                        <div class="small"><a href="/register">Need an account? Sign up!</a></div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
+</main>
 @endsection
