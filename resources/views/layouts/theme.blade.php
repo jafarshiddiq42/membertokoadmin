@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <meta name="description" content="" />
     <meta name="author" content="" />
-    <title>Dashboard - SB Admin Pro</title>
+    <title>MemberToko</title>
     <script src="https://kit.fontawesome.com/03296025ab.js" crossorigin="anonymous"></script>
     {{-- font --}}
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -39,7 +39,7 @@
         <!-- * * Tip * * You can use text or an image for your navbar brand.-->
         <!-- * * * * * * When using an image, we recommend the SVG format.-->
         <!-- * * * * * * Dimensions: Maximum height: 32px, maximum width: 240px-->
-        <a class="navbar-brand pe-3 ps-4 ps-lg-2" href="index.html">SB Admin Pro</a>
+        <a class="navbar-brand pe-3 ps-4 ps-lg-2" href="index.html">MemberToko</a>
         <!-- Navbar Search Input-->
         <!-- * * Note: * * Visible only on and above the lg breakpoint-->
         <form class="form-inline me-auto d-none d-lg-block me-3">
