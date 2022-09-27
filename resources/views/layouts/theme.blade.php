@@ -8,15 +8,19 @@
     <meta name="description" content="" />
     <meta name="author" content="" />
     <title>Dashboard - SB Admin Pro</title>
-    <script src="https://kit.fontawesome.com/03296025ab.js" crossorigin="anonymous"></script> 
+    <script src="https://kit.fontawesome.com/03296025ab.js" crossorigin="anonymous"></script>
+    {{-- font --}}
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
     {{-- punya jafar --}}
     <link href="https://cdn.jsdelivr.net/npm/simple-datatables@latest/dist/style.css" rel="stylesheet" />
     <link href="https://cdn.jsdelivr.net/npm/litepicker/dist/css/litepicker.css" rel="stylesheet" />
     <link href="{{ asset('template/css/styles.css') }}" rel="stylesheet" />
-    
+
     <link rel="icon" type="image/x-icon" href="{{ asset('template/assets/img/favicon.png') }}" />
     {{-- <script data-search-pseudo-elements defer src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/js/all.min.js" --}}
-    
+
     <script src="{{ asset('template/js/jquery.js') }}"></script>
     {{-- <script src="{{ asset('template/css/slider.css') }}"></script> --}}
     @yield('css')
@@ -47,9 +51,9 @@
         <!-- Navbar Items-->
         <ul class="navbar-nav align-items-center ms-auto">
             <!-- Documentation Dropdown-->
-          
+
             <!-- Messages Dropdown-->
-            
+
             <!-- User Dropdown-->
             <li class="nav-item dropdown no-caret dropdown-user me-3 me-lg-4">
                 <a class="btn btn-icon btn-transparent-dark dropdown-toggle" id="navbarDropdownUserImage"
@@ -92,7 +96,7 @@
                     <div class="nav accordion" id="accordionSidenav">
                         <!-- Sidenav Menu Heading (Account)-->
                         <!-- * * Note: * * Visible only on and above the sm breakpoint-->
-                        
+
                         <!-- Sidenav Menu Heading (Produk)-->
                         <div class="sidenav-menu-heading">Data Master</div>
                         <!-- Sidenav Accordion (Dashboard)-->
@@ -124,7 +128,7 @@
                             <nav class="sidenav-menu-nested nav accordion" id="accordionSidenavPages">
                                 <a class="nav-link" href="/paketmerchant">
                                     Paket Langganan Merchant
-                                   
+
                                 </a>
                                 <a class="nav-link" href="/verifikasimerchant">Verifikasi Merchant Terbaru</a>
                                 <a class="nav-link" href="/datamerchant">Data Merchant</a>
@@ -142,7 +146,7 @@
                             <nav class="sidenav-menu-nested nav accordion" id="accordionSidenavPages">
                                 <a class="nav-link" href="dashboard-1.html">
                                     Paket Langganan Member
-                                  
+
                                 </a>
                                 <a class="nav-link" href="dashboard-2.html">Data Member</a>
                                 <a class="nav-link" href="dashboard-2.html">Rekap Member</a>
@@ -170,9 +174,9 @@
                             data-bs-target="#collapsePages" aria-expanded="false" aria-controls="collapsePages">
                             <div class="nav-link-icon"><i class="fa-solid fa-file-circle-check"></i></div>
                             Pengaturan
-                            
+
                             <div class="sidenav-collapse-arrow"></div>
-                            
+
                         </a>
 
 
@@ -211,7 +215,7 @@
     {{-- <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js" crossorigin="anonymous"></script>
     <script src="{{ asset('template/assets/demo/chart-area-demo.js') }}"></script>
     <script src="{{ asset('template/assets/demo/chart-bar-demo.js') }}"></script> --}}
-    
+
     <script src="https://cdn.jsdelivr.net/npm/simple-datatables@latest" crossorigin="anonymous"></script>
     <script src="{{ asset('template/js/datatables/datatables-simple-demo.js') }}"></script>
     <script src="https://cdn.jsdelivr.net/npm/litepicker/dist/bundle.js" crossorigin="anonymous"></script>
