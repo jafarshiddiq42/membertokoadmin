@@ -34,7 +34,7 @@
                                 <div class="row pt-2 px-5">
                                     <div class="col-3 align-self-center">Kategori :</div>
                                     <div class="col">
-                                        <select name="kategori" id="" class="form-control">
+                                        <select name="kategori" id="" class="form-control form-control-sm">
                                             {{-- <option disabled selected value="-">-- pilih kategori --</option> --}}
                                             @foreach ($kategori as $data)
                                             @if ($subkategori->idkategori == $data->id)
@@ -50,11 +50,11 @@
                                 <div class="row pt-2 px-5">
                                     <div class="col-3 align-self-center">Sub-Kategori :</div>
                                     <div class="col">
-                                        <input type="text" value="{{ $subkategori->sub_kategori }}" name="subkategori" id="" class="form-control" placeholder="subkategori">          
+                                        <input type="text" value="{{ $subkategori->sub_kategori }}" name="subkategori" id="" class="form-control form-control-sm" placeholder="subkategori">          
                                     </div>
                                 </div>
                                 <div class="row pt-2 px-5">
-                                    <div class="col-3 align-self-center">Keterangan :</div>
+                                    <div class="col-3 ">Keterangan :</div>
                                     <div class="col">
                                         {{-- <div id="summernote" contenteditable="true"></div> --}}
                                         <textarea id="summernote"  name="keterangan">{{ $subkategori->keterangan }}</textarea>
@@ -69,7 +69,7 @@
                                             id="" ></div>
                                 </div>
                             </div>
-                            <div class="col-4 ">
+                            <div class="col-4 text-center d-flex justify-content-center" style="flex-direction: column">
                                 <style>
                                     .gambarkat {
 
@@ -77,20 +77,42 @@
                                         min-width: 250px;
                                         min-height: 250px;
                                         border-radius: 10px;
+                                        align-self: center;
                                     }
                                 </style>
                                 <div onclick="$('#gambar').click()" class="bg-light gambarkat">
                                     Preview Image
                                 </div>
-                                <input type="file" name="gambar" style="visibility: hidden" id="gambar">
+                                <input type="file" style="visibility: hidden" class="form-control form-control-sm form-control form-control-sm-sm"
+                                    name="gambar" id="gambar">
+                                <div class="">
+                                    <button class="btn btn-sm btn-dark" style=""
+                                        onclick="event.preventDefault();$('#gambar').click()">
+                                        <span class="me-2"> <i class="fa fa-image"></i></span>
+                                        PILIH FOTO
+                                    </button>
+                                </div>
+
 
                             </div>
+                        </form>
                     </div>
                     <div class="row">
-                        <div class="col mx-5" style="text-align-last: right">
-                           <button type="submit" class="btn btn-primary btn-sm mx-4">update</button>
-                        </form>
-
+                        <div class="col mx-5" style="text-align-last: Center">
+    
+                        </div>
+                    </div>
+                    <div class="">
+                        <div class="row">
+                            <div class="col " style="text-align-last: center;">
+                                <div class="">
+                                    <a href="javascript.void(0);" class="btn btn-warning btn-sm "
+                                        onclick="event.preventDefault();$('#updatedform').submit()"><i
+                                            class="fa fa-circle-xmark"></i> BATAL</a>
+                                    <a href="javascript.void(0);" class="btn btn-primary btn-sm "
+                                        onclick="event.preventDefault();$('#updatedform').submit()">SIMPAN</a>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>

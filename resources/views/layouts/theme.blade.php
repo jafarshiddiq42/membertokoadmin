@@ -216,7 +216,7 @@
     <script src="{{ asset('template/assets/demo/chart-area-demo.js') }}"></script>
     <script src="{{ asset('template/assets/demo/chart-bar-demo.js') }}"></script> --}}
 
-    <script src="https://cdn.jsdelivr.net/npm/simple-datatables@latest" crossorigin="anonymous"></script>
+    <script src="{{ asset('template/js/datatables/datatable-simple.js') }}" crossorigin="anonymous"></script>
     <script src="{{ asset('template/js/datatables/datatables-simple-demo.js') }}"></script>
     <script src="https://cdn.jsdelivr.net/npm/litepicker/dist/bundle.js" crossorigin="anonymous"></script>
     <script src="{{ asset('template/js/litepicker.js') }}"></script>

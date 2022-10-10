@@ -23,7 +23,7 @@
         <!-- Main page content-->
         <div class="container-xl px-4 mt-4">
             <div class="card">
-                <div class="card-header">Halaman Edit</div>
+                <div class="card-header">TAMBAH SUB-KATEGORI</div>
                 <div class="card-body p-5">
                     <form action="/subkategori/tambah" id="updatedform" method="post" enctype="multipart/form-data">
                     <div class="row" style="place-content: center;">
@@ -33,7 +33,7 @@
                                 <div class="row pt-2 px-5">
                                     <div class="col-3 align-self-center">Kategori :</div>
                                     <div class="col">
-                                        <select name="kategori" id="" class="form-control">
+                                        <select name="kategori" id="" class="form-control form-control-sm ">
                                             <option disabled selected value="-">-- pilih kategori --</option>
                                             @foreach ($kategori as $data)
                                                 <option class="" value="{{ $data->id }}">{{ $data->kategori }}</option>
@@ -44,14 +44,14 @@
                                 <div class="row pt-2 px-5">
                                     <div class="col-3 align-self-center">Sub-Kategori :</div>
                                     <div class="col">
-                                        <input type="text" name="subkategori" id="" class="form-control" placeholder="subkategori">          
+                                        <input type="text" name="subkategori" id="" class="form-control form-control-sm" placeholder="nama subkategori">          
                                     </div>
                                 </div>
                                 <div class="row pt-2 px-5">
                                     <div class="col-3 align-self-center">Keterangan :</div>
                                     <div class="col">
                                         {{-- <div id="summernote" contenteditable="true"></div> --}}
-                                        <textarea id="summernote"  name="keterangan"></textarea>
+                                        <textarea id="summernote" placeholder="Keterangan Subkategori" name="keterangan"></textarea>
                                     </div>
                                 </div>
                                
@@ -63,7 +63,7 @@
                                             id="" ></div>
                                 </div>
                             </div>
-                            <div class="col-4 ">
+                            <div class="col-4 text-center d-flex justify-content-center" style="flex-direction: column">
                                 <style>
                                     .gambarkat {
 
@@ -71,19 +71,42 @@
                                         min-width: 250px;
                                         min-height: 250px;
                                         border-radius: 10px;
+                                        align-self: center;
                                     }
                                 </style>
                                 <div onclick="$('#gambar').click()" class="bg-light gambarkat">
                                     Preview Image
                                 </div>
-                                <input type="file" name="gambar" style="visibility: hidden" id="gambar">
+                                <input type="file" style="visibility: hidden" class="form-control form-control-sm"
+                                    name="gambar" id="gambar">
+                                <div class="">
+                                    <button class="btn btn-sm btn-dark" style=""
+                                        onclick="event.preventDefault();$('#gambar').click()">
+                                        <span class="me-2"> <i class="fa fa-image"></i></span>
+                                        PILIH FOTO
+                                    </button>
+                                </div>
+
 
                             </div>
                         </form>
                     </div>
                     <div class="row">
-                        <div class="col mx-5" style="text-align-last: right">
-                            <a href="javascript.void(0);" class="btn btn-primary btn-sm mx-4"  onclick="event.preventDefault();$('#updatedform').submit()" >Simpan</a>
+                        <div class="col mx-5" style="text-align-last: Center">
+    
+                        </div>
+                    </div>
+                    <div class="">
+                        <div class="row">
+                            <div class="col " style="text-align-last: center;">
+                                <div class="">
+                                    <a href="javascript.void(0);" class="btn btn-warning btn-sm "
+                                        onclick="event.preventDefault();$('#updatedform').submit()"><i
+                                            class="fa fa-circle-xmark"></i> BATAL</a>
+                                    <a href="javascript.void(0);" class="btn btn-primary btn-sm "
+                                        onclick="event.preventDefault();$('#updatedform').submit()">SIMPAN</a>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -95,7 +118,7 @@
     <script>
         $(document).ready(function() {
             $('#summernote').summernote({
-                placeholder: 'Hello stand alone ui',
+                placeholder: '',
                 tabsize: 2,
                 height: 120,
                 toolbar: [
@@ -106,7 +129,9 @@
                     //   ['table', ['table']],
                     //   ['insert', ['link', 'picture', 'video']],
                     //   ['view', ['fullscreen', 'codeview', 'help']]
-                ]
+                ],
+                inheritPlaceholder: true
+
             });
         });
     </script>

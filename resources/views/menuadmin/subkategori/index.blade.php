@@ -21,8 +21,8 @@
             <div class="card">
                 <div class="card-header">
                     <div class="row">
-                        <div class="col align-self-center"><h1 class="card-title">Sub-Kategori</h1></div>
-                        <div class="col "><a href="/subkategori/tambah" style="float: right" class="btn btn-primary">tambah sub-Kategori</a></div>
+                        <div class="col align-self-center"><h1 class="card-title">Manajemen Sub-Kategori</h1></div>
+                        <div class="col "><a href="/subkategori/tambah" style="float: right" class="btn btn-sm btn-dark"><i class="fa-regular fa-square-plus mx-2"></i>Tambah Sub-kategori</a></div>
                        </div>
                 </div>
                 <div class="card-body mx-4">
@@ -75,7 +75,7 @@
                                     <th>Aksi</th>
                                     <th>Kategori</th>
                                     <th>Sub-Kategori</th>
-                                    <th>Gambar</th>
+                                    {{-- <th>Gambar</th> --}}
                                     <th>Keterangan</th>
                                     <th>Aktif</th>
                                 </tr>
@@ -84,6 +84,10 @@
                                 @foreach ($subkategoris as $data)
                                     <tr>
                                         <td class="text-center">
+                                 
+                                                <a href="" class="btn btn-datatable btn-icon btn-transparent-dark me-2"><i
+                                                        class="fa fa-image"></i></a>
+                                      
                                             <a href="/subkategori/edit/{{ $data->id }}" class="btn btn-datatable btn-icon btn-transparent-dark me-2"><i
                                                     class="fa fa-pencil"></i></a>
                                             <a href="javascript.void(0);" class="btn btn-datatable btn-icon btn-transparent-dark me-2" data-bs-toggle="modal" data-bs-target="#h{{ $data->id }}"><i
@@ -117,10 +121,7 @@
                                         <td>
                                             {{ $data->sub_kategori }}
                                         </td>
-                                        <td class="text-center">
-                                            <a href="" class="btn btn-datatable btn-icon btn-transparent-dark me-2"><i
-                                                    class="fa fa-image"></i></a>
-                                        </td>
+                                       
                                         <td>
                                             {{ strip_tags($data->keterangan) }}
                                         </td>

@@ -21,8 +21,8 @@
             <div class="card">
                 <div class="card-header">
                     <div class="row">
-                        <div class="col align-self-center"><h1 class="card-title">Paket Merchant</h1></div>
-                        <div class="col "><a href="/paketmerchant/tambah" style="float: right" class="btn btn-primary">Tambah Paket Baru</a></div>
+                        <div class="col align-self-center"><h1 class="card-title">Manajemen Data Paket Merchant</h1></div>
+                        <div class="col "><a href="/paketmerchant/tambah" style="float: right" class="btn btn-sm btn-dark"> <i class="fa-regular fa-square-plus mx-2"></i>Tambah Baru</a></div>
                        </div>
                 </div>
                 <div class="card-body mx-4">
@@ -76,7 +76,7 @@
                                     <th>Nama Paket</th>
                                     <th>Harga</th>
                                     <th>Durasi</th>
-                                    <th>Gambar</th>
+                                    {{-- <th>Gambar</th> --}}
                                     <th>Keterangan</th>
                                     <th>Aktif</th>
                                 </tr>
@@ -85,6 +85,8 @@
                                 @foreach ($paketmerchants as $data)
                                     <tr>
                                         <td class="text-center">
+                                            <a href="" class="btn btn-datatable btn-icon me-2"><i class="fa fa-image"></i></a>
+
                                             <a href="/paketmerchant/edit/{{ $data->id }}" class="btn btn-datatable btn-icon btn-transparent-dark me-2"><i
                                                     class="fa fa-pencil"></i></a>
                                             <a href="javascript.void(0);" class="btn btn-datatable btn-icon btn-transparent-dark me-2" data-bs-toggle="modal" data-bs-target="#h{{ $data->id }}"><i
@@ -121,9 +123,7 @@
                                         <td class="text-center">
                                             {{ $data->durasi }}
                                         </td>
-                                        <td class="text-center">
-                                            <a href="" class="btn btn-datatable btn-icon me-2"><i class="fa fa-image"></i></a>
-                                        </td>
+                                       
                                         <td>
                                             {{ strip_tags($data->keterangan) }}
                                         </td>

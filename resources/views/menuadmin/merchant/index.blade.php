@@ -22,7 +22,7 @@
             <div class="card">
                 <div class="card-header">
                <div class="row">
-                <div class="col align-self-center"><h1 class="card-title">Merchant</h1></div>
+                <div class="col align-self-center"><h1 class="card-title">Manajemen Data Merchant</h1></div>
                 {{-- <div class="col "><a href="/kategori/tambah" style="float: right" class="btn btn-primary">tambah Kategori</a></div> --}}
                </div>
                 </div>
