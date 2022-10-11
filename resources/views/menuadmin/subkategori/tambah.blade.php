@@ -100,11 +100,11 @@
                         <div class="row">
                             <div class="col " style="text-align-last: center;">
                                 <div class="">
-                                    <a href="javascript.void(0);" class="btn btn-warning btn-sm "
-                                        onclick="event.preventDefault();$('#updatedform').submit()"><i
-                                            class="fa fa-circle-xmark"></i> BATAL</a>
+                                    <a href="{{ url()->previous() }}" class="btn btn-warning btn-sm "
+                                        onclick=""><i
+                                            class="fa fa-circle-xmark me-1"></i> BATAL</a>
                                     <a href="javascript.void(0);" class="btn btn-primary btn-sm "
-                                        onclick="event.preventDefault();$('#updatedform').submit()">SIMPAN</a>
+                                        onclick="event.preventDefault();$('#updatedform').submit()"><i class="fas fa-circle-check me-1"></i>SIMPAN</a>
                                 </div>
                             </div>
                         </div>

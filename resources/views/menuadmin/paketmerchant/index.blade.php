@@ -22,7 +22,7 @@
                 <div class="card-header">
                     <div class="row">
                         <div class="col align-self-center"><h1 class="card-title">Manajemen Data Paket Merchant</h1></div>
-                        <div class="col "><a href="/paketmerchant/tambah" style="float: right" class="btn btn-sm btn-dark"> <i class="fa-regular fa-square-plus mx-2"></i>Tambah Baru</a></div>
+                        <div class="col "><a href="/paketmerchant/tambah" style="float: right" class="btn btn-sm btn-dark"> <i class="fa-regular fa-square-plus me-1"></i>TAMBAH PAKET-MERCHANT</a></div>
                        </div>
                 </div>
                 <div class="card-body mx-4">

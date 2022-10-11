@@ -23,7 +23,7 @@
         <!-- Main page content-->
         <div class="container-xl px-4 mt-4">
             <div class="card">
-                <div class="card-header">Halaman Edit</div>
+                <div class="card-header">Edit Paket Merchant</div>
                 <div class="card-body p-5">
                     <form action="/paketmerchant/edit/{{ $paketmerchant->id }}" id="updatedform" method="post" enctype="multipart/form-data">
                     <div class="row" style="place-content: center;">
@@ -110,11 +110,11 @@
                         <div class="row">
                             <div class="col " style="text-align-last: center;">
                                 <div class="">
-                                    <a href="javascript.void(0);" class="btn btn-warning btn-sm "
-                                        onclick="event.preventDefault();$('#updatedform').submit()"><i
-                                            class="fa fa-circle-xmark"></i> BATAL</a>
+                                    <a href="{{ url()->previous() }}" class="btn btn-warning btn-sm "
+                                        onclick=""><i
+                                            class="fa fa-circle-xmark me-1"></i> BATAL</a>
                                     <a href="javascript.void(0);" class="btn btn-primary btn-sm "
-                                        onclick="event.preventDefault();$('#updatedform').submit()">SIMPAN</a>
+                                        onclick="event.preventDefault();$('#updatedform').submit()"><i class="fas fa-circle-check me-1"></i> SIMPAN</a>
                                 </div>
                             </div>
                         </div>

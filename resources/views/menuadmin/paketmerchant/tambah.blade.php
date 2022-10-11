@@ -26,43 +26,45 @@
                 <div class="card-header">Halaman Edit</div>
                 <div class="card-body p-5">
                     <form action="/paketmerchant/tambah" id="updatedform" method="post" enctype="multipart/form-data">
-                    <div class="row" style="place-content: center;">
-                            
+                        <div class="row" style="place-content: center;">
+
                             @csrf
                             <div class="col-xl-8">
                                 <div class="row pt-2 px-5">
                                     <div class="col-3 align-self-center">Nama Paket</div>
-                                    <div class="col"><input type="text" name="namapaket"
-                                            value="" class="form-control form-control-sm" placeholder="Nama Paket"></div>
+                                    <div class="col"><input type="text" name="namapaket" value=""
+                                            class="form-control form-control-sm" placeholder="Nama Paket"></div>
                                 </div>
                                 <div class="row pt-2 px-5">
                                     <div class="col-3 align-self-center">Harga</div>
                                     <div class="col"><input style="text-align: right" type="text" name="harga"
-                                            value="" class="form-control form-control-sm" placeholder="100. 000"></div>
+                                            value="" class="form-control form-control-sm" placeholder="100. 000">
+                                    </div>
                                 </div>
                                 <div class="row pt-2 px-5">
                                     <div class="col-3 align-self-center">Durasi</div>
-                                    <div class="col"><select name="durasi" class="form-control form-control-sm" id="">
-                                    <option class="text-center" value="-">--Pilih Durasi--</option> 
-                                    <option value="30">1 bulan</option>    
-                                    <option value="180">6 bulan</option>    
-                                    <option value="360">12 bulan</option>    
-                                    </select></div>
+                                    <div class="col"><select name="durasi" class="form-control form-control-sm"
+                                            id="">
+                                            <option class="text-center" value="-">--Pilih Durasi--</option>
+                                            <option value="30">1 bulan</option>
+                                            <option value="180">6 bulan</option>
+                                            <option value="360">12 bulan</option>
+                                        </select></div>
                                 </div>
                                 <div class="row pt-2 px-5">
                                     <div class="col-3">keterangan</div>
                                     <div class="col">
                                         {{-- <div id="summernote" contenteditable="true"></div> --}}
-                                        <textarea id="summernote"  name="keterangan"></textarea>
+                                        <textarea id="summernote" placeholder="keterangan paket merchant" name="keterangan"></textarea>
                                     </div>
                                 </div>
-                               
-                              
+
+
                                 <div class="row pt-2 px-5">
 
                                     <div class="col-3 align-self-center">Status</div>
-                                    <div class="col"><input class="form-check" type="checkbox"  name="status"
-                                            id="" ></div>
+                                    <div class="col"><input class="form-check" type="checkbox" name="status"
+                                            id=""></div>
                                 </div>
                             </div>
                             <div class="col-4 text-center d-flex justify-content-center" style="flex-direction: column">
@@ -78,6 +80,7 @@
                                 </style>
                                 <div onclick="$('#gambar').click()" class="bg-light gambarkat">
                                     Preview Image
+                                    <img src="" alt="" id="blah" width="100px">
                                 </div>
                                 <input type="file" style="visibility: hidden" class="form-control form-control-sm"
                                     name="gambar" id="gambar">
@@ -91,28 +94,28 @@
 
 
                             </div>
-                        </form>
+                    </form>
+                </div>
+                <div class="row">
+                    <div class="col mx-5" style="text-align-last: Center">
+
                     </div>
+                </div>
+                <div class="">
                     <div class="row">
-                        <div class="col mx-5" style="text-align-last: Center">
-    
-                        </div>
-                    </div>
-                    <div class="">
-                        <div class="row">
-                            <div class="col " style="text-align-last: center;">
-                                <div class="">
-                                    <a href="javascript.void(0);" class="btn btn-warning btn-sm "
-                                        onclick="event.preventDefault();$('#updatedform').submit()"><i
-                                            class="fa fa-circle-xmark"></i> BATAL</a>
-                                    <a href="javascript.void(0);" class="btn btn-primary btn-sm "
-                                        onclick="event.preventDefault();$('#updatedform').submit()">SIMPAN</a>
-                                </div>
+                        <div class="col " style="text-align-last: center;">
+                            <div class="">
+                                <a href="{{ url()->previous() }}" class="btn btn-warning btn-sm "
+                                    onclick=""><i
+                                        class="fa fa-circle-xmark me-1"></i> BATAL</a>
+                                <a href="javascript.void(0);" class="btn btn-primary btn-sm "
+                                    onclick="event.preventDefault();$('#updatedform').submit()"><i class="fas fa-circle-check me-1"></i>SIMPAN</a>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+        </div>
         </div>
     </main>
 @endsection
@@ -136,5 +139,11 @@
 
             });
         });
+        gambar.onchange = evt => {
+            const [file] = gambar.files
+            if (file) {
+                blah.src = URL.createObjectURL(file)
+            }
+        }
     </script>
 @endsection

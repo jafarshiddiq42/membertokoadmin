@@ -22,7 +22,7 @@
                 <div class="card-header">
                <div class="row">
                 <div class="col align-self-center"><h1 class="card-title">Manajemen Data Kategori</h1></div>
-                <div class="col "><a href="/kategori/tambah" style="float: right" class="btn btn-sm btn-dark"><i class="fa-regular fa-square-plus mx-1"></i>Tambah Baru</a></div>
+                <div class="col "><a href="/kategori/tambah" style="float: right" class="btn btn-sm btn-dark"><i class="fa-regular fa-square-plus me-1"></i>TAMBAH KATEGORI</a></div>
                </div>
                 </div>
                 <div class="card-body mx-4">
@@ -127,7 +127,7 @@
                                                 .switch {
                                                     position: relative;
                                                     display: inline-block;
-                                                    width: 60px;
+                                                    width: 50px;
                                                     height: 24px;
                                                 }
 
@@ -184,6 +184,7 @@
                                                     border-radius: 50%;
                                                 }
                                             </style>
+
 
 
                                             <label class="switch">

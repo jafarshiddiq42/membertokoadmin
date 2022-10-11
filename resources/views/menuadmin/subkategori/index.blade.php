@@ -22,7 +22,7 @@
                 <div class="card-header">
                     <div class="row">
                         <div class="col align-self-center"><h1 class="card-title">Manajemen Sub-Kategori</h1></div>
-                        <div class="col "><a href="/subkategori/tambah" style="float: right" class="btn btn-sm btn-dark"><i class="fa-regular fa-square-plus mx-2"></i>Tambah Sub-kategori</a></div>
+                        <div class="col "><a href="/subkategori/tambah" style="float: right" class="btn btn-sm btn-dark"><i class="fa-regular fa-square-plus me-1"></i>TAMBAH SUB-KATEGORI</a></div>
                        </div>
                 </div>
                 <div class="card-body mx-4">
@@ -187,6 +187,7 @@
                                                     border-radius: 50%;
                                                 }
                                             </style>
+
 
 
                                             <label class="switch">
